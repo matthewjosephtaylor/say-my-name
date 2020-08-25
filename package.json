@@ -1,0 +1,41 @@
+{
+  "name": "say_my_name",
+  "version": "0.0.1",
+  "description": "Name all the things",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build": "webpack --mode=production"
+  },
+  "author": "@matt_taylor",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bl": "^2.1.0",
+    "@types/file-saver": "^2.0.1",
+    "@types/greasemonkey": "^4.0.0",
+    "@types/jquery": "^3.3.33",
+    "@types/jszip": "^3.4.1",
+    "@types/mime-types": "^2.1.0",
+    "@types/opentype.js": "^0.7.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "expose-loader": "^0.7.5",
+    "extract-loader": "^4.0.3",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.2.1",
+    "terser": "^4.6.11",
+    "ts-loader": "^6.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
