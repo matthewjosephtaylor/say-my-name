@@ -1,4 +1,4 @@
-import DNS from 'dns2';
+import DNS from "dns2";
 
 // const dns = new DNS();
 
@@ -30,6 +30,9 @@ const server = DNS.createServer((request, send, rinfo) => {
 });
 
 server.on("request", (request, response, rinfo) => {
+  console.log("REQUEST", request);
+  console.log("RESPONSE", response);
+  console.log("RINFO", rinfo);
   console.log(request.header.id, request.questions[0]);
 });
 

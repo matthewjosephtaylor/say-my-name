@@ -1,8 +1,8 @@
 # Project RoadMap
 
 - [x] Basic Node / Typescript Project up and running
-- [x] DNS Proxy Server
-- [ ] Serve non-DNS name
+- [ ] DNS Proxy Server
+- [x] Serve non-DNS name
 - [ ] Add name records without authentication via http
 - [ ] Update name records without authentication via http
 - [ ] Store added name records
