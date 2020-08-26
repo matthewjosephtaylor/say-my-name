@@ -18,3 +18,6 @@
 # Later (Not a goal of current project, but thoughts on better trust model for the web)
   - Next step: have the _user_ trust the CA's that the browser/OS manufacturers currently trust and remove all root CA's except for the user's.
   - Final step: Remove the browser/OS trusted CA's and have the user 'OK' each new website visited. The prompt should include details like if the OS/browser trusts the website, but as a _hint_ not as a _mandate_.
+
+  # Blame
+  Matt Taylor https://mjt.dev

@@ -17,6 +17,7 @@
     "dts-gen": "^0.6.0",
     "expose-loader": "^0.7.5",
     "extract-loader": "^4.0.3",
+    "quicktype": "^15.0.256",
     "terser": "^4.6.11",
     "ts-loader": "^6.2.1",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "dns2": "^1.4.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "quicktype-core": "^6.0.68"
   }
 }
