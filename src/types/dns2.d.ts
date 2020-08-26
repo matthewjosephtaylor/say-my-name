@@ -23,11 +23,11 @@ declare module "dns2" {
 
     //   static Client({ dns = "8.8.8.8", port = 53 }: any): any;
 
-    static DoH({ dns }: any): any;
+    DoH({ dns }: any): any;
 
     //   static DoT({ dns = "1.1.1.1", port = 53 }: any): any;
 
-    static Google(name: any, type: any): any;
+    static Google: (name: any, type?: any) => any;
 
     static createServer(options: any): any;
 
@@ -49,6 +49,12 @@ declare module "dns2" {
   type Packet = {
     // constructor: (data: any) => Packet;
     (data: any): Packet;
+
+    header: Object;
+    questions: Array<any>;
+    answers: Array<any>;
+    authorities: Array<any>;
+    additionals: Array<any>;
 
     toBase64URL(): any;
 
