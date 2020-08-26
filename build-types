@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+set -e
+
+mkdir -p dist/gen/types
+cd ${SCRIPT_DIR}/dist/gen/types
+
+# Produces a bad file but useful as a starting point
+npx dts-gen -o -m dns2

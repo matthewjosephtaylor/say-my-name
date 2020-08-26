@@ -9,6 +9,7 @@ const BUILD_TIME = new Date().getTime();
 
 module.exports = {
   // mode: 'development',
+  target: 'node',
   watch: false,
   entry: "./src/js/index.ts",
   // output: {
@@ -80,6 +81,7 @@ module.exports = {
     ],
   },
   optimization: {
+    minimize: false,
     minimizer: [
       new TerserPlugin({
         cache: true,
