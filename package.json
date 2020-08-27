@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "commander": "^6.0.0",
     "dns2": "^1.4.1",
     "jquery": "^3.4.1",
     "quicktype-core": "^6.0.68"

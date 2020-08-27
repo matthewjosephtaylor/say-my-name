@@ -12,4 +12,4 @@ if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
   exit 1
 fi
 
-node dist/main.js
+node dist/main.js "$@"
