@@ -6,13 +6,17 @@ import DNS, {
   Question,
   Resource,
   ResourceA,
-  DoHAnswer,
+  GoogleAnswer,
 } from "dns2";
+import { domainNameQuery } from "dns/DomainNameQueries";
 
-export function start() {
+export function start(): Promise<number> {
   const server = DNS.createServer(serveRequest);
   listenToRequests(server);
   server.listen(5333);
+  return new Promise((resolve, reject) => {
+    // TODO quiesce
+  });
 }
 
 function listenToRequests(server: UdpServer) {
@@ -39,13 +43,16 @@ function listenToRequests(server: UdpServer) {
 async function serveRequest(request: Packet, send, rinfo) {
   const response = DNS.Packet.createResponseFromRequest(request);
   const [question] = request.questions;
-  const { name } = question;
+  // const { name, type } = question;
 
-  console.log("NAME IS", name);
+  console.log("Question IS", question);
+  const domainName = question.name;
+  const questionType = question.type;
+  console.log("Question PARTS", domainName, questionType);
 
-  if (name === "test.mjt.dev") {
+  if (domainName === "test.mjt.dev") {
     const answer: ResourceA = {
-      name,
+      name: domainName,
       type: DNS.Packet.TYPE.A,
       class: DNS.Packet.CLASS.IN,
       ttl: 300,
@@ -53,12 +60,13 @@ async function serveRequest(request: Packet, send, rinfo) {
     };
     response.answers.push(answer);
   } else {
-    const googleResult = await DNS.Google("google.com", "A");
-    const resourceAnswers: ResourceA[] = googleResult.Answer.map(
-      (dohAnswer) => {
-        return dohAnswerToResourceAnswer(dohAnswer);
-      }
-    );
+    const resourceAnswers = await domainNameQuery(domainName, questionType);
+    // const googleResult = await DNS.Google("google.com", "A");
+    // const resourceAnswers: ResourceA[] = googleResult.Answer.map(
+    //   (dohAnswer) => {
+    //     return dohAnswerToResourceAnswer(dohAnswer);
+    //   }
+    // );
     response.answers.push(...resourceAnswers);
   }
 
@@ -66,7 +74,7 @@ async function serveRequest(request: Packet, send, rinfo) {
   send(response);
 }
 
-function dohAnswerToResourceAnswer(dohAnswer: DoHAnswer): ResourceA {
+function dohAnswerToResourceAnswer(dohAnswer: GoogleAnswer): ResourceA {
   return {
     name: dohAnswer.name,
     // type: DNS.Packet.TYPE.A,

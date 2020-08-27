@@ -1,10 +1,9 @@
 import { Resource } from "dns2";
 import { SmnRuntime } from "runtime/SmnRuntime";
 
-// import oldfs from "fs";
+import oldFs from "fs";
 import { WriteFileOptions } from "fs";
-// const fs = oldfs.promises
-import fs from 'fs/promises'
+const fs = oldFs.promises;
 
 type Path = string;
 // https://stackoverflow.com/a/106223/5306554

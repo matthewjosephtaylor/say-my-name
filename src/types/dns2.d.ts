@@ -9,25 +9,25 @@ declare module "dns2" {
 
 
   // see https://developers.google.com/speed/public-dns/docs/doh/json
-  export interface DoHJsonResponse {
+  export interface GoogleJsonResponse {
     Status: number;
     TC: boolean; // Whether the response is truncated
     RD: boolean; // Always true for Google Public DNS
     RA: boolean; // Always true for Google Public DNS
     AD: boolean; // Whether all response data was validated with DNSSEC
     CD: boolean; // Whether the client asked to disable DNSSEC
-    Question: DoHQuestion[];
-    Answer: DoHAnswer[];
+    Question: GoogleQuestion[];
+    Answer: GoogleAnswer[];
   }
 
-  export interface DoHAnswer {
+  export interface GoogleAnswer {
     name: string;
     type: number;
     TTL: number;
     data: string;
   }
 
-  export interface DoHQuestion {
+  export interface GoogleQuestion {
     name: string;
     type: number;
   }
@@ -72,7 +72,7 @@ declare module "dns2" {
 
     //   static DoT({ dns = "1.1.1.1", port = 53 }: any): any;
 
-    static Google: (name: any, type?: any) => Promise<DoHJsonResponse>;
+    static Google: (name: any, type?: any) => Promise<GoogleJsonResponse>;
 
     static createServer(options: any): UdpServer;
 
