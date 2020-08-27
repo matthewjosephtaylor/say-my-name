@@ -5,7 +5,7 @@
 - [x] Serve non-DNS name
 - [ ] Add name records without authentication via http
 - [ ] Update name records without authentication via http
-- [ ] Store added name records
+- [x] Store added name records
 - [ ] Docker container
 - [ ] Create CA-root cert
 - [ ] Store CA-root cert
