@@ -1,10 +1,10 @@
 import { Resource } from "dns2";
 import { SmnRuntime } from "runtime/SmnRuntime";
 
-import oldfs from "fs";
+// import oldfs from "fs";
 import { WriteFileOptions } from "fs";
-// import fs from "fs/promises";
-const fs = oldfs.promises
+// const fs = oldfs.promises
+import fs from 'fs/promises'
 
 type Path = string;
 // https://stackoverflow.com/a/106223/5306554
@@ -23,11 +23,6 @@ export async function storeResources(
     flag: "w",
   };
   return fs.writeFile(path, data, options);
-  // return new Promise((resolve, reject) => {
-  //   fs.writeFile(path, data, options, (err) => {
-  //     err ? reject(err) : resolve();
-  //   });
-  // });
 }
 
 function resourcesToName(resources: Resource[]): string {
