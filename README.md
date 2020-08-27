@@ -2,7 +2,7 @@
 
 - A better name resolution (DNS) and trust model (TLS) that puts the user back in charge.
 
-# Problems with the exiting model
+# Problems with the existing model
 
 - User's are unable to publish their own names easily
   - Requires going through an official Registrar that 'owns' the TLD (Top Level Domain)
