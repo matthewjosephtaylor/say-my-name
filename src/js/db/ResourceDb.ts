@@ -1,8 +1,10 @@
 import { Resource } from "dns2";
 import { SmnRuntime } from "runtime/SmnRuntime";
 
-import fs from "fs";
+import oldfs from "fs";
 import { WriteFileOptions } from "fs";
+// import fs from "fs/promises";
+const fs = oldfs.promises
 
 type Path = string;
 // https://stackoverflow.com/a/106223/5306554
@@ -12,7 +14,7 @@ export async function storeResources(
   runtime: SmnRuntime,
   resources: Resource[]
 ): Promise<void> {
-  const resourceName = resourcesToName(resources)
+  const resourceName = resourcesToName(resources);
   const path = nameToPath(runtime, resourceName);
   const data = JSON.stringify(resources);
   const options: WriteFileOptions = {
@@ -20,11 +22,12 @@ export async function storeResources(
     mode: 0o666,
     flag: "w",
   };
-  return new Promise((resolve, reject) => {
-    fs.writeFile(path, data, options, (err) => {
-      err ? reject(err) : resolve();
-    });
-  });
+  return fs.writeFile(path, data, options);
+  // return new Promise((resolve, reject) => {
+  //   fs.writeFile(path, data, options, (err) => {
+  //     err ? reject(err) : resolve();
+  //   });
+  // });
 }
 
 function resourcesToName(resources: Resource[]): string {
@@ -39,11 +42,8 @@ export async function retrieveResources(
   resourceName: string
 ): Promise<Resource[]> {
   const path = nameToPath(runtime, resourceName);
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, "utf8", (err, data) => {
-      const resource = JSON.parse(data);
-      err ? reject(err) : resolve(resource);
-    });
+  return fs.readFile(path, "utf8").then((data) => {
+    return JSON.parse(data);
   });
 }
 
