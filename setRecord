@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0` name address"
+  echo -e "Example: ./`basename $0` www.example.com 127.0.0.1"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+# export type ResourceRecord = {
+#   name: DomainName;
+#   type: RecordType;
+#   class: RecordClass;
+#   ttl: number;
+#   address: string;
+# };
+
+declare -r NAME=$1
+declare -r ADDRESS=$2
+
+RECORD=$(cat <<EOF
+{
+  "name": "${NAME}",
+  "type": 1,
+  "class": 1,
+  "ttl": 60,
+  "address": "${ADDRESS}"
+}
+EOF
+)
+
+
+
+curl -d "${RECORD}" -X POST -H 'Content-Type: application/json' http:/localhost:5444/record

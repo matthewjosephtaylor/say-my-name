@@ -1,5 +1,5 @@
 import { SmnRuntime } from "runtime/SmnRuntime";
-import { domainNameQuery, DnsAnswer } from "dns/DomainNameQueries";
+import { domainNameQuery, ResourceRecord } from "dns/DomainNameQueries";
 import assert from "assert";
 
 const TEST_NAMES: { [k in string]: string } = {
@@ -11,7 +11,7 @@ export async function testDomainNameQuery(
 ): Promise<boolean> {
   for (const [domainName, address] of Object.entries(TEST_NAMES)) {
     console.log("testing name", domainName)
-    const answers: DnsAnswer[] = await domainNameQuery(domainName);
+    const answers: ResourceRecord[] = await domainNameQuery(domainName);
     const containsAddress =
       answers.filter((ans) => ans.address === address).length > 0;
     if (!containsAddress) {

@@ -9,27 +9,23 @@ import { startNameDatabaseServer } from "server/NameDatabaseServer";
 //@ts-ignore
 console.log("Say My Name v" + VERSION);
 
-async function main(): Promise<number[]> {
+async function main(): Promise<number> {
   const config = createSmnConfig();
   console.log("Configuration: ", config);
   const runtime: SmnRuntime = createSmnRuntime(config);
   if (config.test !== undefined) {
-    return (await runTest(runtime, config.test)) ? [0] : [1];
+    return (await runTest(runtime, config.test)) ? 0 : 1;
   }
-  return Promise.all([
+
+  return Promise.race([
     startNameQueryServer(runtime),
     startNameDatabaseServer(runtime),
   ]);
 }
 
-main().then((exitCodes) => {
-  const exitCode = exitCodesToExitCode(exitCodes);
+main().then((exitCode) => {
   exitCode === 0
     ? console.log("Normal program termination")
     : console.log("Unexpected program termination, exit code:", exitCode);
   process.exit(exitCode);
 });
-
-function exitCodesToExitCode(exitCodes: number[]): number {
-  return exitCodes.sort()[0];
-}

@@ -1,8 +1,8 @@
-import { Resource } from "dns2";
 import { SmnRuntime } from "runtime/SmnRuntime";
 
 import oldFs from "fs";
 import { WriteFileOptions } from "fs";
+import { ResourceRecord } from "dns/ResourceRecords";
 const fs = oldFs.promises;
 
 type Path = string;
@@ -11,7 +11,7 @@ const VALID_NAME_REGEX: RegExp = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-
 
 export async function storeResources(
   runtime: SmnRuntime,
-  resources: Resource[]
+  resources: ResourceRecord[]
 ): Promise<void> {
   const resourceName = resourcesToName(resources);
   const path = nameToPath(runtime, resourceName);
@@ -24,7 +24,7 @@ export async function storeResources(
   return fs.writeFile(path, data, options);
 }
 
-function resourcesToName(resources: Resource[]): string {
+function resourcesToName(resources: ResourceRecord[]): string {
   if (resources === undefined || resources.length < 1) {
     return undefined;
   }
@@ -34,7 +34,7 @@ function resourcesToName(resources: Resource[]): string {
 export async function retrieveResources(
   runtime: SmnRuntime,
   resourceName: string
-): Promise<Resource[]> {
+): Promise<ResourceRecord[]> {
   const path = nameToPath(runtime, resourceName);
   return fs.readFile(path, "utf8").then((data) => {
     return JSON.parse(data);
