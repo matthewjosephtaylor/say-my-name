@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require("webpack");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const nodeExternals = require('webpack-node-externals');
 // const WebpackUserscript = require('webpack-userscript')
 // const path = require('path')
 
@@ -9,7 +10,9 @@ const BUILD_TIME = new Date().getTime();
 
 module.exports = {
   // mode: 'development',
+  mode: 'production',
   target: 'node',
+  externals: [ nodeExternals() ], // needed for express
   watch: false,
   entry: "./src/js/index.ts",
   // output: {

@@ -9,11 +9,12 @@ import DNS, {
   GoogleAnswer,
 } from "dns2";
 import { domainNameQuery } from "dns/DomainNameQueries";
+import { SmnRuntime } from "runtime/SmnRuntime";
 
-export function start(): Promise<number> {
+export function startNameQueryServer(runtime: SmnRuntime): Promise<number> {
   const server = DNS.createServer(serveRequest);
   listenToRequests(server);
-  server.listen(5333);
+  server.listen(runtime.config.queryPort);
   return new Promise((resolve, reject) => {
     // TODO quiesce
   });
@@ -43,8 +44,6 @@ function listenToRequests(server: UdpServer) {
 async function serveRequest(request: Packet, send, rinfo) {
   const response = DNS.Packet.createResponseFromRequest(request);
   const [question] = request.questions;
-  // const { name, type } = question;
-
   console.log("Question IS", question);
   const domainName = question.name;
   const questionType = question.type;
@@ -61,28 +60,7 @@ async function serveRequest(request: Packet, send, rinfo) {
     response.answers.push(answer);
   } else {
     const resourceAnswers = await domainNameQuery(domainName, questionType);
-    // const googleResult = await DNS.Google("google.com", "A");
-    // const resourceAnswers: ResourceA[] = googleResult.Answer.map(
-    //   (dohAnswer) => {
-    //     return dohAnswerToResourceAnswer(dohAnswer);
-    //   }
-    // );
     response.answers.push(...resourceAnswers);
   }
-
-  // console.log("RESPONSE IS", response);
   send(response);
-}
-
-function dohAnswerToResourceAnswer(dohAnswer: GoogleAnswer): ResourceA {
-  return {
-    name: dohAnswer.name,
-    // type: DNS.Packet.TYPE.A,
-    type: dohAnswer.type,
-    class: DNS.Packet.CLASS.IN,
-    // ttl: 300,
-    ttl: dohAnswer.TTL,
-    // address: "8.8.8.8",
-    address: dohAnswer.data,
-  };
 }

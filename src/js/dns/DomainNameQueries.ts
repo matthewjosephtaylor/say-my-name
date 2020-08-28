@@ -1,4 +1,4 @@
-import DNS, { GoogleJsonResponse, GoogleAnswer, ResourceA } from "dns2";
+import DNS, { GoogleAnswer } from "dns2";
 
 export enum Source {
   LEGACY_DNS = "LEGACY_DNS",
@@ -53,9 +53,7 @@ export type DnsAnswer = {
   name: string;
   type: RecordType;
   class: RecordClass;
-  // ttl: 300,
   ttl: number;
-  // address: "8.8.8.8",
   address: string;
 };
 
@@ -93,9 +91,7 @@ async function queryGoogle(
   type: RecordType,
   options: SourceOptions
 ): Promise<DnsAnswer[]> {
-  console.log(`GOOGLEing ${domainName} ${type}`);
   const googleResult = await DNS.Google(domainName, type);
-  console.log(`GOOGLE RESULT `, googleResult);
   return googleResult.Answer.map((googleAnswer) =>
     googleAnswerToDnsAnswer(googleAnswer)
   );
