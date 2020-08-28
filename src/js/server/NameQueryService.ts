@@ -11,7 +11,7 @@ import DNS, {
 import { domainNameQuery } from "dns/DomainNameQueries";
 import { SmnRuntime } from "runtime/SmnRuntime";
 
-export function startNameQueryServer(runtime: SmnRuntime): Promise<number> {
+export function startNameQueryService(runtime: SmnRuntime): Promise<number> {
   const server = DNS.createServer(serveRequest);
   listenToRequests(server);
   server.listen(runtime.config.queryPort);

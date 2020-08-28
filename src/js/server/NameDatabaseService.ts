@@ -17,7 +17,7 @@ enum Method {
   delete = "delete",
 }
 
-export function startNameDatabaseServer(runtime: SmnRuntime): Promise<number> {
+export function startNameDatabaseService(runtime: SmnRuntime): Promise<number> {
   const app = setupRoutes(runtime);
   app.listen(runtime.config.updatePort);
   return new Promise((resolve, reject) => {

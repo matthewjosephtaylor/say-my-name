@@ -1,10 +1,10 @@
-import { startNameQueryServer } from "./server/NameQueryServer";
+import { startNameQueryService } from "./server/NameQueryService";
 import { SmnRuntime, createSmnRuntime } from "runtime/SmnRuntime";
 import DNS, { ResourceA, Resource } from "dns2";
 import { storeResources, retrieveResources } from "db/ResourceDb";
 import { createSmnConfig } from "runtime/SmnConfig";
 import { runTest } from "test/Tests";
-import { startNameDatabaseServer } from "server/NameDatabaseServer";
+import { startNameDatabaseService } from "server/NameDatabaseService";
 
 //@ts-ignore
 console.log("Say My Name v" + VERSION);
@@ -18,8 +18,8 @@ async function main(): Promise<number> {
   }
 
   return Promise.race([
-    startNameQueryServer(runtime),
-    startNameDatabaseServer(runtime),
+    startNameQueryService(runtime),
+    startNameDatabaseService(runtime),
   ]);
 }
 
