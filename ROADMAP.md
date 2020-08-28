@@ -13,3 +13,4 @@
 - [ ] Create signed cert for name
 - [ ] Get signed cert for name via http
 - [ ] Update name records with authentication via http with signed cert for that name
+- [ ] Easily accessible documentation
