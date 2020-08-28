@@ -36,7 +36,7 @@ export enum RecordClass {
   ANY = 0xff,
 }
 
-export type ResourceRecord = {
+export type NameRecord = {
   name: DomainName;
   type: RecordType;
   class: RecordClass;

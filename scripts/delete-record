@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0` name address"
+  echo -e "Example: ./`basename $0` www.example.com 127.0.0.1"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+declare -r NAME=$1
+
+curl -X DELETE -H 'Content-Type: application/json' http:/localhost:5444/name/${NAME}

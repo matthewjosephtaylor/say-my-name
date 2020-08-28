@@ -3,8 +3,8 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 usage () {
-  echo -e "Usage: `basename $0`"
-  echo -e "Example: ./`basename $0`"
+  echo -e "Usage: `basename $0` domain-name"
+  echo -e "Example: ./`basename $0` www.example.com"
 }
 
 if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
@@ -12,4 +12,6 @@ if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
   exit 1
 fi
 
-webpack --mode=production
+declare -r DOMAIN_NAME=$1
+
+dig @127.0.0.1 -p5333 ${DOMAIN_NAME}

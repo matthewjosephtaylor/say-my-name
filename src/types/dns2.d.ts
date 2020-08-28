@@ -96,8 +96,8 @@ declare module "dns2" {
     (data: any): Packet;
 
     header: Object;
-    questions: Array<any>;
-    answers: Array<any>;
+    questions: Array<Resource>;
+    answers: Array<Resource>;
     authorities: Array<any>;
     additionals: Array<any>;
 

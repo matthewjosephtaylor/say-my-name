@@ -3,8 +3,10 @@ import { SmnRuntime } from "runtime/SmnRuntime";
 export type TestName = string;
 import { testStorage } from "./TestStorage";
 import { testDomainNameQuery } from "test/TestDnsQuery";
+import { testApi } from "test/TestApi";
+import chalk from "chalk";
 
-const TESTS: TestFunction[] = [testStorage, testDomainNameQuery];
+const TESTS: TestFunction[] = [testStorage, testDomainNameQuery, testApi];
 
 export type TestFunction = (runtime: SmnRuntime) => Promise<boolean>;
 
@@ -25,11 +27,12 @@ export async function runTest(
   try {
     const testResult = await testFunction(runtime);
     testResult
-      ? console.log(`${testName}\tPassed :)`)
-      : console.log(`${testName}\tFailed :(`);
+      ? console.log(`${testName}\t${chalk.greenBright("Passed :)")}`)
+      : console.log(`${testName}\t${chalk.redBright("Failed :(")}`);
     return testResult;
   } catch (e) {
-    console.log(`${testName} failed with error:`, e);
+    console.log(`${testName} ${chalk.redBright("Failed :(")}`);
+    console.log(e);
     return false;
   }
 }
@@ -46,6 +49,6 @@ async function testAll(runtime: SmnRuntime): Promise<boolean> {
       return false;
     }
   }
-  console.log("All tests Passed");
+  console.log(chalk.greenBright("All tests Passed :)"));
   return true;
 }

@@ -4,7 +4,7 @@
 - [x] DNS Proxy Server
 - [x] Serve non-DNS name
 - [x] Add name records without authentication via http
-- [ ] Update name records without authentication via http
+- [x] Update name records without authentication via http
 - [x] Store added name records
 - [ ] Docker container
 - [ ] Create CA-root cert

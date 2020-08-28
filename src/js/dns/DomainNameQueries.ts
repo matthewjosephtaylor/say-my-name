@@ -1,5 +1,5 @@
 import DNS, { GoogleAnswer } from "dns2";
-import { DomainName, RecordType, ResourceRecord } from "dns/ResourceRecords";
+import { DomainName, RecordType, NameRecord } from "dns/NameRecords";
 
 export enum Source {
   LEGACY_DNS = "LEGACY_DNS",
@@ -12,12 +12,12 @@ export type SourceOptions = {
   address?: string;
 };
 
-export function domainNameQuery(
+export async function domainNameQuery(
   domainName: DomainName,
   type: RecordType = RecordType.ANY,
   source: Source = Source.GOOGLE,
   options: SourceOptions = {}
-): Promise<ResourceRecord[]> {
+): Promise<NameRecord[]> {
   switch (source) {
     case Source.GOOGLE: {
       return queryGoogle(domainName, type, options);
@@ -28,15 +28,12 @@ export function domainNameQuery(
   }
 }
 
-function googleAnswerToDnsAnswer(dohAnswer: GoogleAnswer): ResourceRecord {
+function googleAnswerToDnsAnswer(dohAnswer: GoogleAnswer): NameRecord {
   return {
     name: dohAnswer.name,
-    // type: DNS.Packet.TYPE.A,
     type: dohAnswer.type,
     class: DNS.Packet.CLASS.IN,
-    // ttl: 300,
     ttl: dohAnswer.TTL,
-    // address: "8.8.8.8",
     address: dohAnswer.data,
   };
 }
@@ -45,9 +42,9 @@ async function queryGoogle(
   domainName: DomainName,
   type: RecordType,
   options: SourceOptions
-): Promise<ResourceRecord[]> {
+): Promise<NameRecord[]> {
   const googleResult = await DNS.Google(domainName, type);
-  return googleResult.Answer.map((googleAnswer) =>
+  return googleResult?.Answer?.map((googleAnswer) =>
     googleAnswerToDnsAnswer(googleAnswer)
   );
 }

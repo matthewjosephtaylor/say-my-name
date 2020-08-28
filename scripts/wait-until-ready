@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0` url ready-value"
+  echo -e "Example: ./`basename $0` http://www.example.com/ hello"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+declare -r TARGET_URL=$1
+declare -r READY_VALUE=$2
+
+until [ -n "$(curl -s ${TARGET_URL} | grep ${READY_VALUE})" ]; do
+    sleep 0.5;
+done;
