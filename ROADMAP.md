@@ -3,7 +3,7 @@
 - [x] Basic Node / Typescript Project up and running
 - [x] DNS Proxy Server
 - [x] Serve non-DNS name
-- [ ] Add name records without authentication via http
+- [x] Add name records without authentication via http
 - [ ] Update name records without authentication via http
 - [x] Store added name records
 - [ ] Docker container
