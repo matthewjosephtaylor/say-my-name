@@ -14,4 +14,6 @@ fi
 
 declare -r NAME=$1
 
-curl -X DELETE -H 'Content-Type: application/json' http:/localhost:5444/name/${NAME}
+source "${SCRIPT_DIR}/config/constants"
+
+curl -X DELETE -H 'Content-Type: application/json' http:/localhost:${API_PORT}/name/${NAME}

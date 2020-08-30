@@ -12,6 +12,8 @@ if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
   exit 1
 fi
 
+source "${SCRIPT_DIR}/config/constants"
+
 # export type ResourceRecord = {
 #   name: DomainName;
 #   type: RecordType;
@@ -35,5 +37,4 @@ EOF
 )
 
 
-
-curl -d "${RECORD}" -X POST -H 'Content-Type: application/json' http:/localhost:5444/record
+curl -d "${RECORD}" -X POST -H 'Content-Type: application/json' http:/localhost:${API_PORT}/record

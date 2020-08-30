@@ -12,6 +12,8 @@ if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
   exit 1
 fi
 
+source "${SCRIPT_DIR}/config/constants"
+
 declare -r DOMAIN_NAME=$1
 
-dig @127.0.0.1 -p5333 ${DOMAIN_NAME}
+dig @127.0.0.1 -p${DNS_PORT} ${DOMAIN_NAME}

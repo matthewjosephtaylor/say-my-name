@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config/constants"
+cd "${SCRIPT_DIR}"
+#   -v "$(pwd)/${HTDOCS_DIR}:/htdocs" \
+# mkdir -p "${HTDOCS_DIR}"
+docker run -d --name "${CONTAINER_NAME}" \
+  -p "${DNS_PORT}:${DNS_PORT}" \
+  -p "${API_PORT}:${API_PORT}" \
+  -v "$(pwd)/${CERTS_DIR}/${NODE_CERT_FILE}:/etc/ssl/certs/node.crt" \
+  -v "$(pwd)/${PRIVATE_DIR}/${NODE_KEY_FILE}:/etc/ssl/private/node.key" \
+  "${IMAGE_NAME}:${IMAGE_TAG}"
+
+        # ssl_certificate /etc/ssl/certs/node.crt;
+        # ssl_certificate_key /etc/ssl/private/node.key;
+
+  docker logs "${CONTAINER_NAME}"

@@ -13,7 +13,7 @@ module.exports = {
   // mode: 'development',
   mode: "production",
   target: "node",
-  externals: [nodeExternals()], // needed for express
+  // externals: [nodeExternals()], // needed for express
   watch: false,
   entry: "./src/js/index.ts",
   // output: {

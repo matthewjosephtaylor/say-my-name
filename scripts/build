@@ -12,7 +12,16 @@ if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
   exit 1
 fi
 
+set -e
 source "${SCRIPT_DIR}/config/constants"
 cd ${PROJECT_DIR}
 
 webpack --mode=production
+
+mkdir -p docker/app
+cp ./dist/main.js docker/app
+
+tar -cvzf docker/app/scripts.tgz scripts
+
+cd docker
+docker build -t "${IMAGE_NAME}:${IMAGE_TAG}" .

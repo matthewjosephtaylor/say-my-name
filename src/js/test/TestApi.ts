@@ -1,5 +1,5 @@
 import { SmnRuntime } from "runtime/SmnRuntime";
-import { execFile } from "child_process";
+import { execFile, ExecFileOptions } from "child_process";
 import { DomainName } from "dns/NameRecords";
 import { startServices } from "index";
 import { getProjectVersion } from "project/ProjectGlobals";
@@ -66,8 +66,14 @@ async function runScript(
   scriptArgs: string[]
 ): Promise<string> {
   const filePath = pathOfScript(runtime, script);
+  const execOptions: ExecFileOptions = {
+    env: {
+      DNS_PORT: String(runtime.config.queryPort),
+      API_PORT: String(runtime.config.updatePort),
+    },
+  };
   return new Promise((resolve, reject) => {
-    execFile(filePath, scriptArgs, (error, stdout, stderr) => {
+    execFile(filePath, scriptArgs, execOptions, (error, stdout, stderr) => {
       if (error) {
         reject(error);
       }
