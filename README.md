@@ -17,9 +17,11 @@ There is a lack of choices for _local network_ that are easy to use, and robust 
 - User's are unable to publish their own names easily
   - Requires going through an official Registrar that 'owns' the TLD (Top Level Domain)
   - No DNS registrar for local reserved domains like '.local'
+  - Docker containers don't play nicely with mDNS
 - User's have no easy ability to establish trust with names
   - Requires going through a select group of 'Certificate Authorities' that somehow became blessed by...who?
   - No CA will issue certs for local domains like '.local'
+  - Creating self-signed certs is a dark art form, and getting browsers and other software to trust and use self-signed certs can be difficult-to-impossible.
 
 # Solution
 
