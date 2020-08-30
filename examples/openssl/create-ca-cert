@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+cd "${SCRIPT_DIR}"
+
+./create-private-key "${ROOT_KEY_FILE}" 
+
+mkdir -p "${CERTS_DIR}"
+./openssl req -x509 -new -nodes \
+ -key "${PRIVATE_DIR}/${ROOT_KEY_FILE}" \
+ -subj "/C=${ROOT_COUNTRY_CODE}/ST=${ROOT_STATE_CODE}/O=${ROOT_COMPANY_NAME}/CN=${ROOT_DOMAIN_NAME}" \
+ -addext "subjectAltName=DNS:${ROOT_DOMAIN_NAME}" \
+ -addext "certificatePolicies = 1.2.3.4" \
+ -sha256 \
+ -days "${ROOT_DAYS}" \
+ -out "${CERTS_DIR}/${ROOT_CERT_FILE}"

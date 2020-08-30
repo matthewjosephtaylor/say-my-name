@@ -1,0 +1,12 @@
+
+declare -r CONTAINER_NAME="example_https"
+declare -r IMAGE_NAME="example_nginx"
+declare -r IMAGE_TAG="latest"
+declare -r HTTPS_PORT="4343"
+declare -r HTTP_PORT="8080"
+declare -r HTDOCS_DIR="htdocs"
+declare -r CERTS_DIR="certs"
+declare -r PRIVATE_DIR="private"
+declare -r CA_LOCATION="../openssl"
+declare -r NODE_KEY_FILE="$(hostname -s).key"
+declare -r NODE_CERT_FILE="$(hostname -s).crt"

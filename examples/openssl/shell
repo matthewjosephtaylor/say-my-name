@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+
+  # -v $IPFS_STAGING:/staging:delegated -v $IPFS_DATA:/data/ipfs:delegated \
+docker run -it --rm \
+  --name "${CONTAINER_NAME}" \
+  --user $(id -u):$(id -g) \
+  -w "/work" \
+  -v "$(pwd):/work" \
+  "${IMAGE_NAME}:${IMAGE_TAG}" "$@"

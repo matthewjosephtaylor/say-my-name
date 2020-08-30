@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+cd "${SCRIPT_DIR}"
+
+./create-csr
+
+# OMFG there truly is no way of sanely doing this from the command line
+# One can _request_ SAN, but sadly as of 2020 there is no way to _create_ SAN cert from command line
+mkdir -p "${SSL_CONF_DIR}"
+cat << EOF > "${SSL_CONF_DIR}/ssl.conf"
+[ req_ext ]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1   = ${NODE_DOMAIN_NAME}
+EOF
+
+
+./openssl x509 -req -in "${REQUESTS_DIR}/${NODE_CSR_FILE}" \
+  -CA "${CERTS_DIR}/${ROOT_CERT_FILE}" \
+  -CAkey "${PRIVATE_DIR}/${ROOT_KEY_FILE}" \
+  -CAcreateserial \
+  -sha256 \
+  -out "${CERTS_DIR}/${NODE_CERT_FILE}" \
+  -days "${NODE_DAYS}" \
+  -extensions req_ext \
+  -extfile "${SSL_CONF_DIR}/ssl.conf"

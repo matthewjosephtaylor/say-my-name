@@ -1,0 +1,28 @@
+
+declare -r CONTAINER_NAME="openssl_command_shell"
+declare -r IMAGE_NAME="example_openssl"
+declare -r IMAGE_TAG="latest"
+declare -r HTTPS_PORT="8443"
+declare -r PRIVATE_DIR="private"
+declare -r CERTS_DIR="certs"
+declare -r SSL_CONF_DIR="ssl_conf"
+declare -r REQUESTS_DIR="requests"
+
+# For root CA cert generation
+declare -r ROOT_KEY_FILE="rootCA.key"
+declare -r ROOT_CERT_FILE="rootCA.crt"
+declare -r ROOT_COMPANY_NAME="Say My Name Root CA"
+declare -r ROOT_COUNTRY_CODE=""
+declare -r ROOT_STATE_CODE=""
+declare -r ROOT_DOMAIN_NAME="root.local"
+declare -r ROOT_DAYS="3"
+
+# For node cert generation
+declare -r NODE_KEY_FILE="$(hostname -s).key"
+declare -r NODE_CERT_FILE="$(hostname -s).crt"
+declare -r NODE_CSR_FILE="$(hostname -s).csr"
+declare -r NODE_COMPANY_NAME="$(hostname -s).local"
+declare -r NODE_COUNTRY_CODE=""
+declare -r NODE_STATE_CODE=""
+declare -r NODE_DOMAIN_NAME="$(hostname -s).local"
+declare -r NODE_DAYS="3"

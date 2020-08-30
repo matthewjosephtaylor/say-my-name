@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+cd "${SCRIPT_DIR}"
+
+mkdir -p "${REQUESTS_DIR}"
+
+
+./create-private-key "${NODE_KEY_FILE}" 
+
+./openssl req -new \
+ -key "${PRIVATE_DIR}/${NODE_KEY_FILE}"\
+ -subj "/C=${NODE_COUNTRY_CODE}/ST=${NODE_STATE_CODE}/O=${NODE_COMPANY_NAME}/CN=*.${NODE_DOMAIN_NAME}" \
+ -addext "subjectAltName = DNS:${NODE_DOMAIN_NAME}" \
+ -nodes \
+ -out "${REQUESTS_DIR}/${NODE_CSR_FILE}"
