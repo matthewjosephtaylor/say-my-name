@@ -29,7 +29,7 @@ Create a DNS service that serves local domain names (as well as public domain na
 
 Create a CA/Certificate service that signs certs for local nodes, with a root certificate that the user can add to their OS/browser/application, or other list of trusted root certificates.
 
-Combine both DNS and Certificate services into one seem-less whole.
+Combine both DNS and Certificate services into one seamless whole.
 
 # How to use
 
