@@ -15,5 +15,5 @@
 - [ ] secure API for creating root-signed certs (first-come, first-served)
 - [ ] Update name records with authentication via http with signed cert for that name
 - [ ] Web UI for stats
-- [ ] Web UI for removing names (no auth needed with first-come, first-served)
+- [ ] Web UI for adding/updating/removing names?
 - [-] Easily accessible documentation

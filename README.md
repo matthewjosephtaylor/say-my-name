@@ -5,6 +5,9 @@ A Certificate Authority (CA) and REST API updatable DNS for local / internal net
 - Local name resolution (DNS) for local domains ('.local', '.home', '.corp', etc...)
 - Local root CA for SSL/TLS (https) certificate creation and management via API.
 
+# Status
+PRE-ALPHA! Feel free to examine code, but things aren't quite ready for release yet. SEE [ROADMAP](./ROADMAP.md)
+
 # Why?
 
 For the _public internet_ there are a _wide_ variety of DNS services and Certificate
@@ -33,7 +36,35 @@ Combine both DNS and Certificate services into one seamless whole.
 
 # How to use
 
-TBD
+1. Build the project (see Building)
+2. Start the docker container on a host
+3. Use host IP as the DNS server for nodes and devices
+
+- Example: `docker --dns 10.0.0.42`
+
+4. Configure nodes to `POST /claim { address : "{ip-address}" }` a DNS name and set IP address for name via the REST API
+
+- Returns signed certificate, and private-key:
+
+```json
+{
+  "cert": "{BASE-64-encoded}",
+  "key": "{BASE-64-encoded}"
+}
+```
+
+- Certificate and key MUST be base-64 decoded before they can be used.
+
+5. Configure nodes with signed cert,private-key pair that was obtained in `/claim` REST API call (see [examples/nginx](./examples/nginx))
+6. Periodically update IP address for DNS name via `POST /name { "address" : "{ip-address}"}`
+7. Obtain your local 'Say My Name' root CA cert via `GET /root` or from a browser like `https://{docker-host}:5444/root` (cert should download from browser)
+
+- Install and trust the root CA on devices/applications connected to the local network
+  - MacOS: (Example TBD)
+  - Windows: (Example TBD)
+  - Linux: (Example TBD)
+  - Node: (Example TBD)
+  - Java: (Example TBD)
 
 # Documentation
 
@@ -78,6 +109,8 @@ See say-my-name/[scripts/config](./scripts/config) for configuration settings.
 | Update DNS address     | set-record   |
 | Start docker container | start        |
 | Stop docker container  | stop         |
+| Show container logs    | logs         |
+| Shell into container   | shell        |
 
 # Examples
 
@@ -90,13 +123,13 @@ See the [examples](./examples) for a sets of bash scripts and Dockerfiles for ho
 
 # Links
 
-For helpful links to things related to this project see [Links](./LINKS.md)
+For helpful links to things related to this project see [LINKS](./LINKS.md)
 
 # Road Map
 
 Currently the project is in active development, and is not in a usable form. Feel free to look at the code, but I wouldn't recommend using just yet.
 
-See [Roadmap](./ROADMAP.md) for current project state.
+See [ROADMAP](./ROADMAP.md) for current project state.
 
 # Later
 
