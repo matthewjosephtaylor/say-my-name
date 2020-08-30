@@ -39,7 +39,13 @@ TBD
 
 # Links
 
-For helpful links to things related to this project see [Links](./Links.md)
+For helpful links to things related to this project see [Links](./LINKS.md)
+
+# Road Map
+
+Currently the project is in active development, and is not in a usable form. Feel free to look at the code, but I wouldn't recommend using just yet.
+
+See [Roadmap](./ROADMAP.md) for current project state.
 
 # Later (Not a goal of current project, but thoughts on better trust model for the web)
 
@@ -52,7 +58,7 @@ Matt Taylor https://mjt.dev created 'Say My Name'. It is released under the MIT 
 
 # Thanks
 
-- Special thanks to @song940 who created 'dns2' https://github.com/song940/node-dns
+- Special thanks to [Liu Song](https://lsong.org/) who created 'dns2' https://github.com/song940/node-dns
   - The backbone of DNS services is built thanks to this library
 - See [package.json](./package.json) for the full list of code dependencies.
   - Too many to name, but I wish to thank all those generous enough to share their work so freely.
