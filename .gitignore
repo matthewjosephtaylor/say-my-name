@@ -3,6 +3,12 @@ storage
 data
 src/html/images/
 src/html/fonts/
+examples/ngix/certs/
+examples/ngix/private/
+examples/openssl/certs/
+examples/openssl/private/
+examples/openssl/requests/
+examples/openssl/ssl_conf/
 
 lib-cov
 *.seed

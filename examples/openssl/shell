@@ -14,7 +14,6 @@ fi
 
 source "${SCRIPT_DIR}/config"
 
-  # -v $IPFS_STAGING:/staging:delegated -v $IPFS_DATA:/data/ipfs:delegated \
 docker run -it --rm \
   --name "${CONTAINER_NAME}" \
   --user $(id -u):$(id -g) \
