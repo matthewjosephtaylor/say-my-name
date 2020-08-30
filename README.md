@@ -1,6 +1,6 @@
 # Say My Name
 
-A Certificate Authority (CA) and REST updatable DNS for local / internal networks.
+A Certificate Authority (CA) and REST API updatable DNS for local / internal networks.
 
 - Local name resolution (DNS) for local domains ('.local', '.home', '.corp', etc...)
 - Local root CA for SSL/TLS (https) certificate creation and management via API.
