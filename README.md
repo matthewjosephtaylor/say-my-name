@@ -133,7 +133,7 @@ See [ROADMAP](./ROADMAP.md) for current project state.
 
 # Later
 
-Things that are not a goal of current project, but are ideas for later projects.
+For ideas on how this project, or other related projects, might progress see [LATER](./LATER.md)
 
 # Blame
 
