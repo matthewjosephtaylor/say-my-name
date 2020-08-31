@@ -4,9 +4,10 @@ declare -r IMAGE_NAME="example_openssl"
 declare -r IMAGE_TAG="latest"
 declare -r HTTPS_PORT="8443"
 declare -r PRIVATE_DIR="private"
+declare -r PUBLIC_DIR="public"
 declare -r CERTS_DIR="certs"
-declare -r SSL_CONF_DIR="ssl_conf"
 declare -r REQUESTS_DIR="requests"
+declare -r TMP_DIR="tmp"
 
 # For root CA cert generation
 declare -r ROOT_KEY_FILE="rootCA.key"
@@ -19,6 +20,7 @@ declare -r ROOT_DAYS="3"
 
 # For node cert generation
 declare -r NODE_KEY_FILE="$(hostname -s).key"
+declare -r NODE_PUBLIC_KEY_FILE="$(hostname -s).key.pub"
 declare -r NODE_CERT_FILE="$(hostname -s).crt"
 declare -r NODE_CSR_FILE="$(hostname -s).csr"
 declare -r NODE_COMPANY_NAME="$(hostname -s).local"

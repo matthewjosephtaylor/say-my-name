@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0` path-to-file"
+  echo -e "Example: ./`basename $0` ./foo.txt"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+cd "${SCRIPT_DIR}"
+
+declare -r IN_FILE="$1"
+
+mkdir -p "${TMP_DIR}"
+
+./openssl dgst -sha256 \
+ -sign "${PRIVATE_DIR}/${NODE_KEY_FILE}" \
+ -out "${IN_FILE}.sig" "${IN_FILE}"
+
+# ./openssl base64 -in "${TMP_DIR}/sign.sha256" -out "${TMP_DIR}/signature"

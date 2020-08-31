@@ -17,5 +17,7 @@ cd "${SCRIPT_DIR}"
 
 declare -r KEY_FILE="$1"
 
-mkdir -p "${PRIVATE_DIR}"
-./openssl genrsa -out "${PRIVATE_DIR}/${KEY_FILE}" 2048
+mkdir -p "${PUBLIC_DIR}"
+
+./openssl rsa -in "${PRIVATE_DIR}/${KEY_FILE}" \
+ -pubout -out "${PUBLIC_DIR}/${KEY_FILE}.pub"

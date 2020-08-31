@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0` target-file [signature-file]"
+  echo -e "Example: ./`basename $0` ./foo.txt"
+  echo -e "Example: ./`basename $0` ./foo.txt ./foo.txt.sig"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+cd "${SCRIPT_DIR}"
+
+declare -r TARGET_FILE="$1"
+declare -r SIG_FILE="${2:-$1.sig}"
+
+./openssl dgst -sha256 \
+-verify "${PUBLIC_DIR}/${NODE_PUBLIC_KEY_FILE}" \
+-signature "${SIG_FILE}" "${TARGET_FILE}"

@@ -3,8 +3,8 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 usage () {
-  echo -e "Usage: `basename $0` key-file"
-  echo -e "Example: ./`basename $0` foo.key"
+  echo -e "Usage: `basename $0`"
+  echo -e "Example: ./`basename $0`"
 }
 
 if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
@@ -15,7 +15,4 @@ fi
 source "${SCRIPT_DIR}/config"
 cd "${SCRIPT_DIR}"
 
-declare -r KEY_FILE="$1"
-
-mkdir -p "${PRIVATE_DIR}"
-./openssl genrsa -out "${PRIVATE_DIR}/${KEY_FILE}" 2048
+./create-public-key "${NODE_KEY_FILE}"
