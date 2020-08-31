@@ -2,7 +2,7 @@
 
 Things to think about for the future.
 
-# Possible evolutions of current project
+## Possible evolutions of current project
 
 - Become [ACME](https://tools.ietf.org/html/rfc8555) compliant?
 
