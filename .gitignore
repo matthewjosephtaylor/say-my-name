@@ -7,6 +7,7 @@ examples/ngix/certs/
 examples/ngix/private/
 examples/openssl/certs/
 examples/openssl/private/
+examples/openssl/public/
 examples/openssl/requests/
 examples/openssl/ssl_conf/
 docker/app

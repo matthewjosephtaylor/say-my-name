@@ -10,3 +10,6 @@
 - .local https://en.wikipedia.org/wiki/.local
 - Good info on local certs: https://letsencrypt.org/docs/certificates-for-localhost/
 - Simple CA for home user https://github.com/jsha/minica
+- Let's Encrypt process: https://letsencrypt.org/how-it-works/
+- The ACME protocol for domain validation: https://github.com/ietf-wg-acme/acme/blob/master/draft-ietf-acme-acme.md
+- Sign/Verify files with openssl: https://www.zimuel.it/blog/sign-and-verify-a-file-using-openssl
