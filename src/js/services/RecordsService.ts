@@ -9,6 +9,7 @@ import {
 } from "project/ProjectGlobals";
 
 import { Response } from "express-serve-static-core";
+import { toMany } from "object/Objects";
 
 type RuntimeRequestHandler = (runtime: SmnRuntime) => RequestHandler;
 
@@ -112,8 +113,4 @@ async function sendResult(
       response.status(200).send(value);
     })
     .catch((reason) => response.status(500).send(reason));
-}
-
-function toMany<T>(obj: T | T[]): T[] {
-  return obj instanceof Array ? obj : [obj];
 }

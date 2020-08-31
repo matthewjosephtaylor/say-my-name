@@ -12,10 +12,11 @@ declare -r TMP_DIR="tmp"
 # For root CA cert generation
 declare -r ROOT_KEY_FILE="rootCA.key"
 declare -r ROOT_CERT_FILE="rootCA.crt"
-declare -r ROOT_COMPANY_NAME="Say My Name Root CA"
+declare -r ROOT_COMPANY_NAME="Say My Name"
 declare -r ROOT_COUNTRY_CODE=""
 declare -r ROOT_STATE_CODE=""
 declare -r ROOT_DOMAIN_NAME="root.local"
+declare -r ROOT_COMMON_NAME="Say My Name Local Network Certificate Authority"
 declare -r ROOT_DAYS="3"
 
 # For node cert generation

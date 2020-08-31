@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Usage: `basename $0` key-file"
+  echo -e "Example: ./`basename $0` foo.key"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
+  usage
+  exit 1
+fi
+
+source "${SCRIPT_DIR}/config"
+cd "${SCRIPT_DIR}"
+
+declare -r KEY_FILE="$1"
+
+mkdir -p "${PRIVATE_DIR}"
+
+openssl genrsa -out "${PRIVATE_DIR}/${KEY_FILE}" 2048

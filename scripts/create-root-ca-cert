@@ -18,7 +18,8 @@ cd "${SCRIPT_DIR}"
 ./create-private-key "${ROOT_KEY_FILE}" 
 
 mkdir -p "${CERTS_DIR}"
-./openssl req -x509 -new -nodes \
+
+openssl req -x509 -new -nodes \
  -key "${PRIVATE_DIR}/${ROOT_KEY_FILE}" \
  -subj "/C=${ROOT_COUNTRY_CODE}/ST=${ROOT_STATE_CODE}/O=${ROOT_COMPANY_NAME}/CN=${ROOT_COMMON_NAME}" \
  -addext "subjectAltName=DNS:${ROOT_DOMAIN_NAME}" \

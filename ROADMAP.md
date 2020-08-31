@@ -8,7 +8,7 @@
 - [x] Store added name records
 - [x] Docker container
 - [x] Create CA-root cert
-- [ ] Create root cert for SMN install
+- [x] Create root cert for SMN install
 - [ ] Backup plan for CA-root cert
 - [x] Create signed cert for name
 - [x] Get signed cert for name via http
