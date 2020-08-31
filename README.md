@@ -6,6 +6,7 @@ A Certificate Authority (CA) and REST API updatable DNS for local / internal net
 - Local root CA for SSL/TLS (https) certificate creation and management via API.
 
 # Status
+
 PRE-ALPHA! Feel free to examine code, but things aren't quite ready for release yet. SEE [ROADMAP](./ROADMAP.md)
 
 # Why?
@@ -80,14 +81,49 @@ Combine both DNS and Certificate services into one seamless whole.
 - Git clone source:
 
 ```shell
-git clone https://github.com/matthewjosephtaylor/say-my-name.git
+$ git clone https://github.com/matthewjosephtaylor/say-my-name.git
 ```
 
 ## Building
 
 ```shell
-cd say-my-name/scripts
-./build
+$ cd say-my-name/scripts
+$ ./build
+```
+
+## Starting
+
+```shell
+$ cd say-my-name/scripts
+$ ./build
+```
+
+# Backups
+
+How the user chooses to backup will vary.
+
+Backups are suggested but not required.
+
+In the event that the root CA key is lost, no new node certs can be generated with that key. Existing node certs will continue to work fine until they expire.
+
+In the event that the root server is lost, re-install a new server at the same location.
+
+Nodes with existing keys will 'claim' new names without interruption, as long as the root server is at the same location.
+
+All server data is stored in the `data` directory
+
+### A simple backup procedure for backing up data
+
+```shell
+$ cd say-my-name/data
+$ tar -cvzf <backups-folder>/private-key-backups.tgz .
+```
+
+### A simple restore procedure for backed up data
+
+```shell
+$ cd say-my-name/data
+$ tar -xvf <backups-folder>/private-key-backups.tgz .
 ```
 
 ## Script Commands
