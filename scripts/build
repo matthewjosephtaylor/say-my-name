@@ -13,7 +13,7 @@ if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then
 fi
 
 set -e
-source "${SCRIPT_DIR}/config/constants"
+source "${SCRIPT_DIR}/config"
 cd ${PROJECT_DIR}
 
 webpack --mode=production
