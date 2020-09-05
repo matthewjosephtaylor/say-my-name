@@ -16,7 +16,7 @@
 
 ▸ **deleteRecords**(`runtime`: [SmnRuntime](runtime.md#smnruntime), `domainName`: string): *Promise‹void›*
 
-*Defined in [db/NameDb.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/db/NameDb.ts#L14)*
+*Defined in [db/NameDb.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/db/NameDb.ts#L14)*
 
 **Parameters:**
 
@@ -33,7 +33,7 @@ ___
 
 ▸ **retrieveRecords**(`runtime`: [SmnRuntime](runtime.md#smnruntime), `domainName`: [DomainName](dns.md#domainname)): *Promise‹[NameRecord](dns.md#namerecord)[]›*
 
-*Defined in [db/NameDb.ts:44](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/db/NameDb.ts#L44)*
+*Defined in [db/NameDb.ts:44](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/db/NameDb.ts#L44)*
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ ___
 
 ▸ **storeRecords**(`runtime`: [SmnRuntime](runtime.md#smnruntime), `resources`: [NameRecord](dns.md#namerecord)[]): *Promise‹void›*
 
-*Defined in [db/NameDb.ts:26](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/db/NameDb.ts#L26)*
+*Defined in [db/NameDb.ts:26](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/db/NameDb.ts#L26)*
 
 **Parameters:**
 

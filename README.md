@@ -1,9 +1,10 @@
 # Say My Name
 
-A Certificate Authority (CA) and REST API updatable DNS for local / internal networks.
+A Certificate Authority (CA) and DNS for local / internal networks
 
 - Local name resolution (DNS) for local domains ('.local', '.home', '.corp', etc...)
-- Local root CA for SSL/TLS (https) certificate creation and management via API.
+  - Managed my REST API
+- Local root CA for SSL/TLS (https) certificate creation and management via REST API
 
 # Status
 
@@ -139,6 +140,7 @@ See say-my-name/[scripts/config](./scripts/config) for configuration settings.
 | Build Project          | build        |
 | Build and Run          | devloop      |
 | Run Tests              | tests        |
+| Generate Docs          | docs         |
 | DNS lookup             | query-record |
 | Update DNS address     | set-record   |
 | Start docker container | start        |
@@ -146,10 +148,9 @@ See say-my-name/[scripts/config](./scripts/config) for configuration settings.
 | Show container logs    | logs         |
 | Shell into container   | shell        |
 
-
 ## API
-See [API](API.md) for API documentation.
 
+See [API](API.md) for API documentation.
 
 # Examples
 

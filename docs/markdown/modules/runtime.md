@@ -20,7 +20,7 @@
 
 Ƭ **SmnConfig**: *object*
 
-*Defined in [runtime/SmnConfig.ts:4](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/runtime/SmnConfig.ts#L4)*
+*Defined in [runtime/SmnConfig.ts:4](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/runtime/SmnConfig.ts#L4)*
 
 #### Type declaration:
 
@@ -40,7 +40,7 @@ ___
 
 Ƭ **SmnRuntime**: *object*
 
-*Defined in [runtime/SmnRuntime.ts:3](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/runtime/SmnRuntime.ts#L3)*
+*Defined in [runtime/SmnRuntime.ts:3](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/runtime/SmnRuntime.ts#L3)*
 
 #### Type declaration:
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **createSmnConfig**(): *[SmnConfig](runtime.md#smnconfig)*
 
-*Defined in [runtime/SmnConfig.ts:12](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/runtime/SmnConfig.ts#L12)*
+*Defined in [runtime/SmnConfig.ts:12](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/runtime/SmnConfig.ts#L12)*
 
 **Returns:** *[SmnConfig](runtime.md#smnconfig)*
 
@@ -62,7 +62,7 @@ ___
 
 ▸ **createSmnRuntime**(`config`: [SmnConfig](runtime.md#smnconfig)): *[SmnRuntime](runtime.md#smnruntime)*
 
-*Defined in [runtime/SmnRuntime.ts:7](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/runtime/SmnRuntime.ts#L7)*
+*Defined in [runtime/SmnRuntime.ts:7](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/runtime/SmnRuntime.ts#L7)*
 
 **Parameters:**
 

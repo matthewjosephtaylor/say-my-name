@@ -22,7 +22,7 @@
 
 Ƭ **TestFunction**: *function*
 
-*Defined in [test/Tests.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/test/Tests.ts#L11)*
+*Defined in [test/Tests.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/test/Tests.ts#L11)*
 
 #### Type declaration:
 
@@ -40,7 +40,7 @@ ___
 
 Ƭ **TestName**: *string*
 
-*Defined in [test/Tests.ts:3](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/test/Tests.ts#L3)*
+*Defined in [test/Tests.ts:3](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/test/Tests.ts#L3)*
 
 ## Functions
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **runTest**(`runtime`: [SmnRuntime](runtime.md#smnruntime), `testName`: [TestName](test.md#testname)): *Promise‹boolean›*
 
-*Defined in [test/Tests.ts:13](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/test/Tests.ts#L13)*
+*Defined in [test/Tests.ts:13](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/test/Tests.ts#L13)*
 
 **Parameters:**
 
@@ -65,7 +65,7 @@ ___
 
 ▸ **testApi**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹boolean›*
 
-*Defined in [test/TestApi.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/test/TestApi.ts#L15)*
+*Defined in [test/TestApi.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/test/TestApi.ts#L15)*
 
 **Parameters:**
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **testDomainNameQuery**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹boolean›*
 
-*Defined in [test/TestDnsQuery.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/test/TestDnsQuery.ts#L10)*
+*Defined in [test/TestDnsQuery.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/test/TestDnsQuery.ts#L10)*
 
 **Parameters:**
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **testStorage**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹boolean›*
 
-*Defined in [test/TestStorage.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/57773d3/src/js/test/TestStorage.ts#L14)*
+*Defined in [test/TestStorage.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/test/TestStorage.ts#L14)*
 
 **Parameters:**
 

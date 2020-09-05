@@ -46,3 +46,6 @@ npx typedoc --out "${HTML_DOCS_DIR}" \
   --plugin typedoc-plugin-external-module-name \
   --theme "${PROJECT_DIR}/node_modules/typedoc-neo-theme/bin/default" \
   "${PROJECT_SRC}"
+
+echo "copying template..."
+cp "${PROJECT_DIR}/templates/docs/index.html" "${PROJECT_DIR}/docs" 
