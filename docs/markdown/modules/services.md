@@ -15,7 +15,7 @@
 
 ▸ **startDomainNameService**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹number›*
 
-*Defined in [services/DomainNameService.ts:16](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/services/DomainNameService.ts#L16)*
+*Defined in [services/DomainNameService.ts:16](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/services/DomainNameService.ts#L16)*
 
 **Parameters:**
 
@@ -31,7 +31,7 @@ ___
 
 ▸ **startRecordsService**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹number›*
 
-*Defined in [services/RecordsService.ts:33](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/services/RecordsService.ts#L33)*
+*Defined in [services/RecordsService.ts:33](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/services/RecordsService.ts#L33)*
 
 **Parameters:**
 

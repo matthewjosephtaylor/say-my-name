@@ -14,7 +14,7 @@
 
 ▸ **setupRootCa**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹boolean›*
 
-*Defined in [cert/RootCertificates.ts:6](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/cert/RootCertificates.ts#L6)*
+*Defined in [cert/RootCertificates.ts:6](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/cert/RootCertificates.ts#L6)*
 
 **Parameters:**
 

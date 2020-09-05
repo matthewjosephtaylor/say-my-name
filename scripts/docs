@@ -23,9 +23,8 @@ npx apidoc-swagger -i "${PROJECT_SRC}" -o "${OPENAPI_DIR}"
 
 echo "creating typedoc json ..."
 mkdir -p  "${TYPEDOC_JSON_DIR}"
-  # --plugin typedoc-neo-theme \
-    # --excludeNotExported \
 npx typedoc --json "${TYPEDOC_JSON_DIR}" \
+  --plugin typedoc-plugin-external-module-name \
   --readme none --mode modules \
   "${PROJECT_SRC}"
 
@@ -33,6 +32,7 @@ echo "creating markdown docs..."
 mkdir -p  "${MARKDOWN_DOCS_DIR}"
 npx typedoc --out "${MARKDOWN_DOCS_DIR}" \
   --readme none --mode modules  --excludeNotExported \
+  --options "${PROJECT_DIR}/typedoc.neo-theme.json" \
   --plugin typedoc-neo-theme \
   --plugin typedoc-plugin-external-module-name \
   --plugin typedoc-plugin-markdown \
@@ -42,6 +42,7 @@ echo "creating html docs..."
 mkdir -p  "${HTML_DOCS_DIR}"
 npx typedoc --out "${HTML_DOCS_DIR}" \
   --readme none --mode modules  --excludeNotExported \
+  --options "${PROJECT_DIR}/typedoc.neo-theme.json" \
   --plugin typedoc-neo-theme \
   --plugin typedoc-plugin-external-module-name \
   --theme "${PROJECT_DIR}/node_modules/typedoc-neo-theme/bin/default" \

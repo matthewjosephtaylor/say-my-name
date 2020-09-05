@@ -14,7 +14,7 @@
 
 ▸ **toMany**‹**T**›(`obj`: T | T[]): *T[]*
 
-*Defined in [object/Objects.ts:1](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/object/Objects.ts#L1)*
+*Defined in [object/Objects.ts:1](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/object/Objects.ts#L1)*
 
 **Type parameters:**
 

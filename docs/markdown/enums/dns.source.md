@@ -16,7 +16,7 @@
 
 • **DOH**: = "DOH"
 
-*Defined in [dns/DomainNameQueries.ts:7](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/DomainNameQueries.ts#L7)*
+*Defined in [dns/DomainNameQueries.ts:7](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/DomainNameQueries.ts#L7)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **GOOGLE**: = "GOOGLE"
 
-*Defined in [dns/DomainNameQueries.ts:6](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/DomainNameQueries.ts#L6)*
+*Defined in [dns/DomainNameQueries.ts:6](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/DomainNameQueries.ts#L6)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **LEGACY_DNS**: = "LEGACY_DNS"
 
-*Defined in [dns/DomainNameQueries.ts:5](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/DomainNameQueries.ts#L5)*
+*Defined in [dns/DomainNameQueries.ts:5](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/DomainNameQueries.ts#L5)*

@@ -26,7 +26,7 @@
 
 Ƭ **DomainName**: *string*
 
-*Defined in [dns/NameRecords.ts:1](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L1)*
+*Defined in [dns/NameRecords.ts:1](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L1)*
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Ƭ **NameRecord**: *object*
 
-*Defined in [dns/NameRecords.ts:39](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L39)*
+*Defined in [dns/NameRecords.ts:39](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L39)*
 
 #### Type declaration:
 
@@ -54,7 +54,7 @@ ___
 
 Ƭ **SourceOptions**: *object*
 
-*Defined in [dns/DomainNameQueries.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/DomainNameQueries.ts#L10)*
+*Defined in [dns/DomainNameQueries.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/DomainNameQueries.ts#L10)*
 
 #### Type declaration:
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **domainNameQuery**(`domainName`: [DomainName](dns.md#domainname), `type`: [RecordType](../enums/dns.recordtype.md), `source`: [Source](../enums/dns.source.md), `options`: [SourceOptions](dns.md#sourceoptions)): *Promise‹[NameRecord](dns.md#namerecord)[]›*
 
-*Defined in [dns/DomainNameQueries.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/DomainNameQueries.ts#L15)*
+*Defined in [dns/DomainNameQueries.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/DomainNameQueries.ts#L15)*
 
 **Parameters:**
 

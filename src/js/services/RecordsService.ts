@@ -63,10 +63,7 @@ const getHello: RuntimeRequestHandler = (runtime) => {
 };
 
 /**
- * @api {get} /version Version
- * @apiSuccess (200) {string} version  Version
- * @apiSuccessExample {string} Success-Response:
- * "1.0.0"
+ * @api {get} /version
  *
  */
 const getAppVersion: RuntimeRequestHandler = (runtime) => {
@@ -101,7 +98,6 @@ const deleteName: RuntimeRequestHandler = (runtime) => {
   };
 };
 
-/** @ */
 const ROUTE_TABLE: [Method, Route, RuntimeRequestHandler][] = [
   [Method.get, Route.root, getHello],
   [Method.get, Route.version, getAppVersion],

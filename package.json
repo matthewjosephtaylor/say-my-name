@@ -1,7 +1,7 @@
 {
   "name": "say-my-name",
   "version": "0.0.1",
-  "description": "A Certificate Authority (CA) and REST API updatable DNS for local / internal networks",
+  "description": "A Certificate Authority (CA) and DNS for local / internal networks",
   "main": "index.js",
   "sideEffects": false,
   "scripts": {

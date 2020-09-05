@@ -22,7 +22,7 @@
 
 • **createRootCaCert**: = "create-root-ca-cert"
 
-*Defined in [script/Scripts.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L14)*
+*Defined in [script/Scripts.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L14)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **deleteRecord**: = "delete-record"
 
-*Defined in [script/Scripts.ts:12](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L12)*
+*Defined in [script/Scripts.ts:12](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L12)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **docs**: = "docs"
 
-*Defined in [script/Scripts.ts:16](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L16)*
+*Defined in [script/Scripts.ts:16](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L16)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **queryRecord**: = "query-record"
 
-*Defined in [script/Scripts.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L11)*
+*Defined in [script/Scripts.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L11)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **setRecord**: = "set-record"
 
-*Defined in [script/Scripts.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L10)*
+*Defined in [script/Scripts.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L10)*
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 • **testKeyExists**: = "test-key-exists"
 
-*Defined in [script/Scripts.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L15)*
+*Defined in [script/Scripts.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L15)*
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 • **waitUntilReady**: = "wait-until-ready"
 
-*Defined in [script/Scripts.ts:13](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/script/Scripts.ts#L13)*
+*Defined in [script/Scripts.ts:13](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/script/Scripts.ts#L13)*

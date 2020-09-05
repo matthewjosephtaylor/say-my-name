@@ -38,7 +38,7 @@
 
 • **A**: = 1
 
-*Defined in [dns/NameRecords.ts:4](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L4)*
+*Defined in [dns/NameRecords.ts:4](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L4)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **AAAA**: = 28
 
-*Defined in [dns/NameRecords.ts:20](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L20)*
+*Defined in [dns/NameRecords.ts:20](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L20)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **ANY**: = 255
 
-*Defined in [dns/NameRecords.ts:27](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L27)*
+*Defined in [dns/NameRecords.ts:27](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L27)*
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 • **AXFR**: = 252
 
-*Defined in [dns/NameRecords.ts:24](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L24)*
+*Defined in [dns/NameRecords.ts:24](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L24)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 • **CAA**: = 257
 
-*Defined in [dns/NameRecords.ts:28](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L28)*
+*Defined in [dns/NameRecords.ts:28](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L28)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 • **CNAME**: = 5
 
-*Defined in [dns/NameRecords.ts:8](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L8)*
+*Defined in [dns/NameRecords.ts:8](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L8)*
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 • **EDNS**: = 41
 
-*Defined in [dns/NameRecords.ts:22](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L22)*
+*Defined in [dns/NameRecords.ts:22](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L22)*
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 • **HINFO**: = 13
 
-*Defined in [dns/NameRecords.ts:16](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L16)*
+*Defined in [dns/NameRecords.ts:16](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L16)*
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 • **MAILA**: = 254
 
-*Defined in [dns/NameRecords.ts:26](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L26)*
+*Defined in [dns/NameRecords.ts:26](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L26)*
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 • **MAILB**: = 253
 
-*Defined in [dns/NameRecords.ts:25](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L25)*
+*Defined in [dns/NameRecords.ts:25](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L25)*
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 • **MB**: = 7
 
-*Defined in [dns/NameRecords.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L10)*
+*Defined in [dns/NameRecords.ts:10](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L10)*
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 • **MD**: = 3
 
-*Defined in [dns/NameRecords.ts:6](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L6)*
+*Defined in [dns/NameRecords.ts:6](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L6)*
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 • **MF**: = 4
 
-*Defined in [dns/NameRecords.ts:7](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L7)*
+*Defined in [dns/NameRecords.ts:7](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L7)*
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 • **MG**: = 8
 
-*Defined in [dns/NameRecords.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L11)*
+*Defined in [dns/NameRecords.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L11)*
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 • **MINFO**: = 14
 
-*Defined in [dns/NameRecords.ts:17](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L17)*
+*Defined in [dns/NameRecords.ts:17](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L17)*
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 • **MR**: = 9
 
-*Defined in [dns/NameRecords.ts:12](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L12)*
+*Defined in [dns/NameRecords.ts:12](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L12)*
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 • **MX**: = 15
 
-*Defined in [dns/NameRecords.ts:18](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L18)*
+*Defined in [dns/NameRecords.ts:18](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L18)*
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 • **NS**: = 2
 
-*Defined in [dns/NameRecords.ts:5](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L5)*
+*Defined in [dns/NameRecords.ts:5](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L5)*
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 • **NULL**: = 10
 
-*Defined in [dns/NameRecords.ts:13](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L13)*
+*Defined in [dns/NameRecords.ts:13](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L13)*
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 • **PTR**: = 12
 
-*Defined in [dns/NameRecords.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L15)*
+*Defined in [dns/NameRecords.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L15)*
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 • **SOA**: = 6
 
-*Defined in [dns/NameRecords.ts:9](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L9)*
+*Defined in [dns/NameRecords.ts:9](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L9)*
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 • **SPF**: = 99
 
-*Defined in [dns/NameRecords.ts:23](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L23)*
+*Defined in [dns/NameRecords.ts:23](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L23)*
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 • **SRV**: = 33
 
-*Defined in [dns/NameRecords.ts:21](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L21)*
+*Defined in [dns/NameRecords.ts:21](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L21)*
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 • **TXT**: = 16
 
-*Defined in [dns/NameRecords.ts:19](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L19)*
+*Defined in [dns/NameRecords.ts:19](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L19)*
 
 ___
 
@@ -230,4 +230,4 @@ ___
 
 • **WKS**: = 11
 
-*Defined in [dns/NameRecords.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/dns/NameRecords.ts#L14)*
+*Defined in [dns/NameRecords.ts:14](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/dns/NameRecords.ts#L14)*

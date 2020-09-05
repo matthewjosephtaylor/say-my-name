@@ -25,7 +25,7 @@ Main entry point
 
 Ƭ **ExitCode**: *number*
 
-*Defined in [index.ts:23](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/index.ts#L23)*
+*Defined in [index.ts:23](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/index.ts#L23)*
 
 ## Variables
 
@@ -33,7 +33,7 @@ Main entry point
 
 • **ERROR_EXIT_CODE**: *1* = 1
 
-*Defined in [index.ts:20](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/index.ts#L20)*
+*Defined in [index.ts:20](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/index.ts#L20)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **SUCCESS_EXIT_CODE**: *0* = 0
 
-*Defined in [index.ts:21](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/index.ts#L21)*
+*Defined in [index.ts:21](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/index.ts#L21)*
 
 ## Functions
 
@@ -49,7 +49,7 @@ ___
 
 ▸ **startServices**(`runtime`: [SmnRuntime](runtime.md#smnruntime)): *Promise‹[ExitCode](main.md#exitcode)›*
 
-*Defined in [index.ts:51](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/index.ts#L51)*
+*Defined in [index.ts:51](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/index.ts#L51)*
 
 **Parameters:**
 

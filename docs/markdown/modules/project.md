@@ -21,7 +21,7 @@
 
 Ƭ **ProjectPackage**: *object*
 
-*Defined in [project/ProjectGlobals.ts:1](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/project/ProjectGlobals.ts#L1)*
+*Defined in [project/ProjectGlobals.ts:1](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/project/ProjectGlobals.ts#L1)*
 
 #### Type declaration:
 
@@ -37,7 +37,7 @@
 
 ▸ **getBuildTimeIso**(): *string*
 
-*Defined in [project/ProjectGlobals.ts:27](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/project/ProjectGlobals.ts#L27)*
+*Defined in [project/ProjectGlobals.ts:27](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/project/ProjectGlobals.ts#L27)*
 
 **Returns:** *string*
 
@@ -47,7 +47,7 @@ ___
 
 ▸ **getBuildTimeMills**(): *number*
 
-*Defined in [project/ProjectGlobals.ts:23](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/project/ProjectGlobals.ts#L23)*
+*Defined in [project/ProjectGlobals.ts:23](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/project/ProjectGlobals.ts#L23)*
 
 **Returns:** *number*
 
@@ -57,7 +57,7 @@ ___
 
 ▸ **getProjectPackage**(): *[ProjectPackage](project.md#projectpackage)*
 
-*Defined in [project/ProjectGlobals.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/project/ProjectGlobals.ts#L11)*
+*Defined in [project/ProjectGlobals.ts:11](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/project/ProjectGlobals.ts#L11)*
 
 **Returns:** *[ProjectPackage](project.md#projectpackage)*
 
@@ -67,6 +67,6 @@ ___
 
 ▸ **getProjectVersion**(): *string*
 
-*Defined in [project/ProjectGlobals.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/0262347/src/js/project/ProjectGlobals.ts#L15)*
+*Defined in [project/ProjectGlobals.ts:15](https://github.com/matthewjosephtaylor/say-my-name/blob/3dc1c34/src/js/project/ProjectGlobals.ts#L15)*
 
 **Returns:** *string*

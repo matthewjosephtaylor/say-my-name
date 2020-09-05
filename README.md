@@ -70,6 +70,12 @@ Combine both DNS and Certificate services into one seamless whole.
 
 # Documentation
 
+See [Html DOCS](https://matthewjosephtaylor.github.io/say-my-name/html/index.html) for source documentation in HTML format
+
+See [Markdown DOCS](https://github.com/matthewjosephtaylor/say-my-name/blob/master/docs/markdown/README.md) for source documentation in Markdown format
+
+See [API](API.md) for API documentation.
+
 ## Prerequisites
 
 - Docker: https://docs.docker.com/get-docker/
