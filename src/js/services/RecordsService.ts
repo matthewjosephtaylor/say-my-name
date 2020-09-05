@@ -52,7 +52,9 @@ function setupRoutes(runtime: SmnRuntime) {
   });
   return app;
 }
-
+/**
+ * @api {get} / Hello
+ */
 const getHello: RuntimeRequestHandler = (runtime) => {
   return (request, response) => {
     const prj = getProjectPackage();
@@ -60,6 +62,13 @@ const getHello: RuntimeRequestHandler = (runtime) => {
   };
 };
 
+/**
+ * @api {get} /version Version
+ * @apiSuccess (200) {string} version  Version
+ * @apiSuccessExample {string} Success-Response:
+ * "1.0.0"
+ *
+ */
 const getAppVersion: RuntimeRequestHandler = (runtime) => {
   return (request, response) => {
     response.send(getProjectVersion());
@@ -92,6 +101,7 @@ const deleteName: RuntimeRequestHandler = (runtime) => {
   };
 };
 
+/** @ */
 const ROUTE_TABLE: [Method, Route, RuntimeRequestHandler][] = [
   [Method.get, Route.root, getHello],
   [Method.get, Route.version, getAppVersion],

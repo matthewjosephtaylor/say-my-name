@@ -13,6 +13,7 @@ export enum Script {
   waitUntilReady = "wait-until-ready",
   createRootCaCert = "create-root-ca-cert",
   testKeyExists = "test-key-exists",
+  docs = "docs",
 }
 
 export type StdOutString = string;
@@ -33,9 +34,19 @@ export type ScriptOptions = ExecFileOptions & {
   failOnError?: boolean;
 };
 
-export function isScriptResultSuccessful(scriptResult: ScriptResult) : boolean {
+export function isScriptResultSuccessful(scriptResult: ScriptResult): boolean {
   const [stdout, stderr, exitCode, signal] = scriptResult;
   return exitCode === SUCCESS_EXIT_CODE;
+}
+
+export function logScriptResult(scriptResult: ScriptResult): void {
+  const [stdout, stderr, exitCode, signal] = scriptResult;
+  if (stdout !== undefined) {
+    console.log(stdout);
+  }
+  if (stderr !== undefined) {
+    console.error(stderr);
+  }
 }
 
 /**

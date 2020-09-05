@@ -24,3 +24,4 @@ WORKDIR /app
 RUN node --enable-source-maps /app/main.js --test all
 
 CMD node --enable-source-maps /app/main.js
+# CMD /app/main.js

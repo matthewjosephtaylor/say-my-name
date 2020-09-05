@@ -1,7 +1,23 @@
-declare -r PROJECT_DIR="${SCRIPT_DIR}/../"
-declare -r IMAGE_NAME="say-my-name"
+declare -r PROJECT_DIR="${SCRIPT_DIR}/.."
+declare -r TRASH_DIR="${PROJECT_DIR}/_TRASH"
+
+# Documentaiton config
+declare -r DOCS_DIR="${PROJECT_DIR}/docs"
+
+declare -r OPENAPI_DIR="${DOCS_DIR}/openapi"
+declare -r TYPEDOC_JSON_DIR="${DOCS_DIR}/typedoc-json"
+
+declare -r HTML_DOCS_DIR="${DOCS_DIR}/html"
+declare -r MARKDOWN_DOCS_DIR="${DOCS_DIR}/markdown"
+
+# Project info
+declare -r PROJECT_NAME=$(cat ${PROJECT_DIR}/package.json | jq -r '.name')
+declare -r PROJECT_SRC="${PROJECT_DIR}/$(cat ${PROJECT_DIR}/package.json | jq -r '.directories.src')"
+
+# Docker config
+declare -r IMAGE_NAME="${PROJECT_NAME}"
 declare -r IMAGE_TAG="latest"
-declare -r CONTAINER_NAME="say-my-name"
+declare -r CONTAINER_NAME="${PROJECT_NAME}"
 
 declare -r DATA_DIR="${PROJECT_DIR}/data"
 declare -r DNS_PORT="${DNS_PORT:-5333}"

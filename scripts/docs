@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage () {
+  echo -e "Generate Documentation for Project"
+  echo -e "Usage: `basename $0`"
+}
+
+if [[ "$1" =~ ^-h$ || "$1" =~ ^--help$ ]]; then usage exit 1; fi
+
+set -e
+source "${SCRIPT_DIR}/config"
+cd "${PROJECT_DIR}"
+
+mkdir -p  "${TRASH_DIR}"
+
+[ -d "${DOCS_DIR}" ] && mv -f "${DOCS_DIR}" "${TRASH_DIR}/$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+echo "creating openapi..."
+mkdir -p  "${OPENAPI_DIR}"
+npx apidoc-swagger -i "${PROJECT_SRC}" -o "${OPENAPI_DIR}"
+
+echo "creating typedoc json ..."
+mkdir -p  "${TYPEDOC_JSON_DIR}"
+  # --plugin typedoc-neo-theme \
+    # --excludeNotExported \
+npx typedoc --json "${TYPEDOC_JSON_DIR}" \
+  --readme none --mode modules \
+  "${PROJECT_SRC}"
+
+echo "creating markdown docs..."
+mkdir -p  "${MARKDOWN_DOCS_DIR}"
+npx typedoc --out "${MARKDOWN_DOCS_DIR}" \
+  --readme none --mode modules  --excludeNotExported \
+  --plugin typedoc-neo-theme \
+  --plugin typedoc-plugin-external-module-name \
+  --plugin typedoc-plugin-markdown \
+  "${PROJECT_SRC}"
+
+echo "creating html docs..."
+mkdir -p  "${HTML_DOCS_DIR}"
+npx typedoc --out "${HTML_DOCS_DIR}" \
+  --readme none --mode modules  --excludeNotExported \
+  --plugin typedoc-neo-theme \
+  --plugin typedoc-plugin-external-module-name \
+  --theme "${PROJECT_DIR}/node_modules/typedoc-neo-theme/bin/default" \
+  "${PROJECT_SRC}"

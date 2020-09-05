@@ -98,15 +98,13 @@ $ cd say-my-name/scripts
 $ ./build
 ```
 
-# Backups
-
-How the user chooses to backup will vary.
+## Backups
 
 Backups are suggested but not required.
 
 In the event that the root CA key is lost, no new node certs can be generated with that key. Existing node certs will continue to work fine until they expire.
 
-In the event that the root server is lost, re-install a new server at the same location.
+In the event that the root server is lost, re-install a new server at the same location, and install the new 'Say My Name Root CA' certificate on internal network devices.
 
 Nodes with existing keys will 'claim' new names without interruption, as long as the root server is at the same location.
 
@@ -147,6 +145,11 @@ See say-my-name/[scripts/config](./scripts/config) for configuration settings.
 | Stop docker container  | stop         |
 | Show container logs    | logs         |
 | Shell into container   | shell        |
+
+
+## API
+See [API](API.md) for API documentation.
+
 
 # Examples
 

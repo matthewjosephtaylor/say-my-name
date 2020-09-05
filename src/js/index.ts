@@ -1,11 +1,17 @@
+/**
+ * Main entry point
+
+ * @packageDocumentation
+ * @module Main
+ * @preferred
+ */
+
 import { startDomainNameService } from "./services/DomainNameService";
 import { SmnRuntime, createSmnRuntime } from "runtime/SmnRuntime";
 import { createSmnConfig } from "runtime/SmnConfig";
 import { runTest } from "test/Tests";
 import { startRecordsService } from "services/RecordsService";
 import { getBuildTimeIso, getProjectPackage } from "project/ProjectGlobals";
-import { runScript, Script, isScriptResultSuccessful } from "script/Scripts";
-import { RunContext } from "quicktype-core";
 import { setupRootCa } from "cert/RootCertificates";
 
 const projectPackage = getProjectPackage();
@@ -23,6 +29,7 @@ async function main(): Promise<ExitCode> {
   const config = createSmnConfig();
   console.log("Configuration: ", config);
   const runtime: SmnRuntime = createSmnRuntime(config);
+
   if (config.test !== undefined) {
     return (await runTest(runtime, config.test))
       ? SUCCESS_EXIT_CODE
