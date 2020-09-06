@@ -3,8 +3,8 @@
 A Certificate Authority (CA) and DNS for local / internal networks
 
 - Local name resolution (DNS) for local domains ('.local', '.home', '.corp', etc...)
-  - Managed my REST API
-- Local root CA for SSL/TLS (https) certificate creation and management via REST API
+- Local root CA for SSL/TLS (https) certificate creation and management
+- Both names and certificates managed via REST API
 
 # Status
 
